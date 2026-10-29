@@ -7,6 +7,7 @@ import easyReturn from "../../assets/return.png";
 import premium from "../../assets/premium.png";
 import LaptopDealImage from "../../assets/laptop-deal.png";
 import Products from "./Products";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -83,7 +84,62 @@ const Home = () => {
         </div>
       </section>
 
-      <Products />
+      <section className="xl:px-14 lg:px-8 px-4 py-6">
+        <div className="md:flex text-center md:text-left justify-between items-end lg:mb-10 mb-7">
+          <div className="md:w-[80%] xl:w-auto">
+            <h2 className="lg:text-[32px] md:text-[26px] text-[20px] font-semibold">
+              Top Products
+            </h2>
+            <p className="lg:text-[15px] md:text-[14px] text-[11px] md:w-[70%] lg:w-[70%] text-gray-700 ">
+              Browse our carefully selected top picks, chosen to match your
+              style, preferences, and needs for a seamless shopping experience.
+            </p>
+          </div>
+        </div>
+        <Products />
+      </section>
+
+      <section className="bg-[#0E0E0E] py-10 xl:px-0 px-4 xl:my-26">
+        <div className="grid md:grid-cols-2  items-center">
+          <div className="col-span-1">
+            <img
+              src={LaptopDealImage}
+              alt=""
+              className="xl:h-67.5 h-45 mx-auto object-center"
+            />
+          </div>
+
+          <div className="text-center xl:mt-0 mt-5">
+            <p className="text-white xl:text-[17px] lg:text-[13px]  text-[11px] xl:w-[80%] mx-auto">
+              Get high-performance desktops at unbeatable prices. Perfect for
+              gaming, work, and multitasking - don’t miss out on this special
+              offer!
+            </p>
+
+            <h1 className="xl:text-[52px] lg:text-[32px] text-[26px] mt-1 mb-1 text-[#eee] opacity-70 categoryHeading">
+              30% OFF
+            </h1>
+            <Link className="text-black text-[11px] xl:text-[15px] bg-white xl:px-8 px-5 py-1.5 xl:py-2 rounded-full  inline-block  -mt-2">
+              Shop Now
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="xl:px-14 lg:px-8 px-4 py-6">
+        <div className="md:flex text-center md:text-left justify-between items-end lg:mb-10 mb-7">
+          <div className="md:w-[80%] xl:w-auto">
+            <h2 className="lg:text-[32px] md:text-[26px] text-[20px] font-semibold">
+              Featured Products
+            </h2>
+            <p className="lg:text-[15px] md:text-[14px] text-[11px] md:w-[70%] lg:w-[70%] text-gray-700 ">
+              Browse our carefully selected top picks, chosen to match your
+              style, preferences, and needs for a seamless shopping experience.
+            </p>
+          </div>
+        </div>
+        <Products />
+      </section>
     </>
   );
 };

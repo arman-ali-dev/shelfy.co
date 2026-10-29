@@ -16,7 +16,7 @@ const Header = () => {
             alt=""
             className="w-5 h-5 mr-2 filter invert brightness-0"
           />
-          <span> Upgrade Your Lifestyle with GizmoDeck.Co</span>
+          <span> Upgrade Your Lifestyle with Shelfy.Co</span>
         </li>
 
         <li className="bg-white text-black px-3 py-1.25 rounded-md cursor-pointer">

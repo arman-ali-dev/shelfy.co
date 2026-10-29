@@ -92,8 +92,7 @@ const LinkColumn = ({ title, links, className = "", children }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-black">
-      {/* 1. Trust strip */}
+    <footer className="bg-black mt-20">
       <div className="border-b border-white/15 lg:px-14 px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 py-6 lg:py-8">
           {trustItems.map(({ icon: Icon, title, text }) => (
@@ -114,13 +113,11 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* 2. Main footer links */}
       <div className="lg:px-14 px-6">
         <div className="grid grid-cols-2 gap-x-6 gap-y-2 md:gap-10 md:grid-cols-5 py-10 lg:py-14">
-          {/* Brand + contact + newsletter + socials */}
           <div className="col-span-2">
             <h1 className="font-semibold text-white text-[16px] lg:text-[22px]">
-              GizmoDeck.Co
+              Shelfy.Co
             </h1>
             <p className="text-white/60 text-[11px] lg:text-[12px] mt-2 max-w-sm">
               One marketplace for gadgets from trusted sellers across India.
@@ -216,7 +213,7 @@ const Footer = () => {
       <div className="lg:px-14 px-6 border-t border-white/15">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 py-5 lg:py-6">
           <p className="text-[11px] lg:text-[12px] text-white/60 text-center lg:text-left">
-            © {new Date().getFullYear()} GizmoDeck.Co. All rights reserved.
+            © {new Date().getFullYear()} Shelfy.Co. All rights reserved.
           </p>
 
           <ul className="flex justify-center gap-5 lg:gap-8 text-[11px] lg:text-[12px] text-white/60">
