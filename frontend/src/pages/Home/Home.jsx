@@ -1,12 +1,12 @@
-import CategoryGrid from "./CategoryGrid";
-import ShopByCategory from "./ShopByCategory";
+import CategoryGrid from "./Category/CategoryGrid";
+import ShopByCategory from "./Category/ShopByCategory";
 
 import deadline from "../../assets/deadline.png";
 import shopping from "../../assets/shopping.png";
 import easyReturn from "../../assets/return.png";
 import premium from "../../assets/premium.png";
 import LaptopDealImage from "../../assets/laptop-deal.png";
-import Products from "./Products";
+import Products from "./Product/Products";
 import { Link } from "react-router-dom";
 
 const Home = () => {

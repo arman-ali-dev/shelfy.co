@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import ProductCard from "./ProductCard";
