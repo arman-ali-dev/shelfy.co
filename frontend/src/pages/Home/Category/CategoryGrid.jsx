@@ -1,10 +1,10 @@
 import React from "react";
-import menImage from "../../assets/men.jpeg";
-import shoesImage from "../../assets/shoes.jpg";
-import men2Image from "../../assets/men-2.jpg";
-import bagImage from "../../assets/bag.jpg";
-import jwelleryImage from "../../assets/jwellery.jpeg";
-import slipperImage from "../../assets/slipper.jpeg";
+import menImage from "../../../assets/men.jpeg";
+import shoesImage from "../../../assets/shoes.jpg";
+import men2Image from "../../../assets/men-2.jpg";
+import bagImage from "../../../assets/bag.jpg";
+import jwelleryImage from "../../../assets/jwellery.jpeg";
+import slipperImage from "../../../assets/slipper.jpeg";
 
 const CategoryGrid = () => {
   return (

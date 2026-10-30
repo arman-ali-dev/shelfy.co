@@ -1,15 +1,15 @@
 import React from "react";
 import { Skeleton, useMediaQuery, useTheme } from "@mui/material";
 import ShopByCategoryCard from "./ShopByCategoryCard";
-import tshirt from "../../assets/tshirt.png";
-import dress from "../../assets/dress.png";
-import electronic from "../../assets/electronic.png";
-import cosmetics from "../../assets/cosmetics.png";
-import furniture from "../../assets/furniture.png";
-import grocery from "../../assets/grocery.png";
-import slippers from "../../assets/slippers.png";
-import sport from "../../assets/sport.png";
-import homeAppliance from "../../assets/home-appliance.png";
+import tshirt from "../../../assets/tshirt.png";
+import dress from "../../../assets/dress.png";
+import electronic from "../../../assets/electronic.png";
+import cosmetics from "../../../assets/cosmetics.png";
+import furniture from "../../../assets/furniture.png";
+import grocery from "../../../assets/grocery.png";
+import slippers from "../../../assets/slippers.png";
+import sport from "../../../assets/sport.png";
+import homeAppliance from "../../../assets/home-appliance.png";
 
 const categories = [
   {
