@@ -15,6 +15,8 @@ import LockIcon from "@mui/icons-material/Lock";
 
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import UserDetails from "./UserDetails";
+import Address from "./Address/Address";
+import Orders from "./Orders/Orders";
 
 const menu = [
   {
@@ -138,14 +140,8 @@ const Account = () => {
         <section className="px-4 py-6 sm:p-8 w-full lg:w-[80%] overflow-y-auto bg-gray-50 min-h-screen lg:min-h-[90vh]">
           <Routes>
             <Route path="/" element={<UserDetails />} />
-            {/* <Route path="/security" element={<Security />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route
-              path="/order/:orderId/:orderItemId"
-              element={<OrderDetails />}
-            />
-            <Route path="/addresses" element={<Address />} />
-            <Route path="/wishlist" element={<Wishlist />} /> */}
+            <Route path="addresses" element={<Address />} />
+            <Route path="orders" element={<Orders />} />
           </Routes>
         </section>
       </div>
