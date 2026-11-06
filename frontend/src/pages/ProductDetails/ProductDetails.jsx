@@ -10,6 +10,8 @@ import vanImage from "../../assets/van.png";
 import returnImage from "../../assets/return.png";
 import Details from "./Details";
 import Features from "./Features";
+import Reviews from "./Reviews";
+import SimilarProduct from "./SimilarProducts";
 
 const images = [
   "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80&auto=format&fit=crop",
@@ -286,8 +288,17 @@ const ProductDetails = () => {
         ) : activeTab == "features" ? (
           <Features />
         ) : (
-          <Reviews productId={productId} />
+          <Reviews />
         )}
+
+        <div className="lg:my-20 my-16">
+          <h1 className="lg:text-2xl md:text-[24px] text-[20px] font-bold">
+            Similar Products
+          </h1>
+          <div className="lg:pt-5 pt-3">
+            <SimilarProduct />
+          </div>
+        </div>
       </div>
     </>
   );
