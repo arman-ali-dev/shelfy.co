@@ -18,6 +18,7 @@ import UserDetails from "./UserDetails";
 import Address from "./Address/Address";
 import Orders from "./Orders/Orders";
 import OrderDetails from "./Orders/OrderDetails";
+import Wishlist from "./Wishlist/WIshlist";
 
 const menu = [
   {
@@ -144,6 +145,7 @@ const Account = () => {
             <Route path="addresses" element={<Address />} />
             <Route path="orders" element={<Orders />} />
             <Route path="order/3/2" element={<OrderDetails />} />
+            <Route path="wishlist" element={<Wishlist />} />
           </Routes>
         </section>
       </div>
