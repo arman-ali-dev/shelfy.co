@@ -42,7 +42,7 @@ const App = () => {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<ProductDetails />} path="/product-details" />
-        <Route element={<Account />} path="/account" />
+        <Route element={<Account />} path="/account/*" />
       </Routes>
 
       {!hideFooter && <Footer />}
