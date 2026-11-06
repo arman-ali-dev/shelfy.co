@@ -26,11 +26,8 @@ const refundedSteps = [
   { name: "Refunded", value: "REFUNDED" },
 ];
 
-const OrderStepper = ({ order }) => {
-  const { orderStatus, createdAt, estimatedDeliveryDate, deliverDateTime } =
-    order || {};
-
-  console.log("order", order);
+const OrderStepper = () => {
+  const orderStatus = "PENDING";
 
   const [statusStep, setStatusStep] = useState(steps);
 
@@ -55,7 +52,7 @@ const OrderStepper = ({ order }) => {
   const getDescription = (step) => {
     switch (step.value) {
       case "PENDING":
-        return `on ${formatDate(createdAt)}`;
+        return `on ${formatDate(new Date())}`;
 
       case "CONFIRMED":
         return "Seller has confirmed your order";
@@ -67,9 +64,9 @@ const OrderStepper = ({ order }) => {
         return `Arriving today`;
 
       case "DELIVERED":
-        return deliverDateTime
-          ? `Delivered on ${formatDate(deliverDateTime)}`
-          : `Expected by ${formatDate(estimatedDeliveryDate)}`;
+        return new Date()
+          ? `Delivered on ${formatDate(new Date())}`
+          : `Expected by ${formatDate(new Date())}`;
 
       case "CANCELLED":
         return "Your order has been cancelled";

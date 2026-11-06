@@ -17,6 +17,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import UserDetails from "./UserDetails";
 import Address from "./Address/Address";
 import Orders from "./Orders/Orders";
+import OrderDetails from "./Orders/OrderDetails";
 
 const menu = [
   {
@@ -142,6 +143,7 @@ const Account = () => {
             <Route path="/" element={<UserDetails />} />
             <Route path="addresses" element={<Address />} />
             <Route path="orders" element={<Orders />} />
+            <Route path="order/3/2" element={<OrderDetails />} />
           </Routes>
         </section>
       </div>
