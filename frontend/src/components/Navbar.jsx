@@ -1,23 +1,12 @@
 import { useEffect, useState } from "react";
 
 import SearchIcon from "@mui/icons-material/Search";
-import MenuIcon from "@mui/icons-material/Menu";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 import heartIcon from "../assets/love.png";
 import userIcon from "../assets/user (2).png";
 import bagIcon from "../assets/shopping-bag.png";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  Box,
-  Avatar,
-  Tooltip,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 const Navbar = () => {
   const navigate = useNavigate();
   const [isSticky, setIsSticky] = useState(false);
@@ -37,16 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Box
-        className={`w-full border-b border-[#bbb6b6] bg-white shadow-sm
-    transition-all duration-300 ease-in-out
-    ${
-      isSticky
-        ? "fixed top-0 left-0 z-50 translate-y-0 opacity-100"
-        : "relative  opacity-100"
-    }
-  `}
-      >
+      <Box className="w-full border-b border-[#bbb6b6] bg-white shadow-sm transition-all duration-300 ease-in-out">
         <div className="lg:h-17.5 md:h-15 h-12.5 flex items-center justify-between px-4 sm:px-6 lg:px-12">
           <Link
             to="/"
