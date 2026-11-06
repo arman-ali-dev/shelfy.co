@@ -103,7 +103,7 @@ const OrderStepper = () => {
 
             {index < statusStep.length - 1 && (
               <div
-                className={`h-20 w-[2px] ${
+                className={`h-20 w-0.5 ${
                   index < currentStep ? "bg-black" : "bg-gray-400"
                 }`}
               ></div>
