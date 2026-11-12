@@ -1,6 +1,6 @@
-import WishlistProductCard from "../Wishlist/WishlistProductCard";
+import WishlistProductCard from "../../Wishlist/WishlistProductCard";
 import { Skeleton } from "@mui/material";
-import NoWishlistItems from "../Wishlist/NoWishlistItems";
+import NoWishlistItems from "../../Wishlist/NoWishlistItems";
 
 const Wishlist = () => {
   return (
