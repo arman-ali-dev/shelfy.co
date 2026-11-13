@@ -7,6 +7,7 @@ import userIcon from "../assets/user (2).png";
 import bagIcon from "../assets/shopping-bag.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Tooltip } from "@mui/material";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [isSticky, setIsSticky] = useState(false);

@@ -101,7 +101,7 @@ const Account = () => {
               openDrawer ? "translate-x-0" : "-translate-x-full"
             } lg:translate-x-0 transition-transform duration-300 ease-in-out`}
         >
-          <div className="h-full w-67.5 sm:w-75 flex flex-col justify-between py-5">
+          <div className="h-[84vh] w-67.5 sm:w-75 flex flex-col justify-between py-5">
             <div className="space-y-2">
               {menu.map((elem, index) => (
                 <div

@@ -9,6 +9,11 @@ import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import NotFound from "./pages/404/NotFound";
+import Cart from "./pages/Cart/Cart";
+import Checkout from "./pages/Checkout/Checkout";
+import OrderSuccess from "./pages/Checkout/OrderSuccess";
+import Review from "./pages/Review/Review";
+import SellerDashboard from "./pages/Seller/SellerDashboard";
 
 const App = () => {
   const location = useLocation();
@@ -27,6 +32,21 @@ const App = () => {
     "/order-placed",
   ];
 
+  const isNotFound =
+    ![
+      "/",
+      "/product-details",
+      "/register",
+      "/login",
+      "/wishlist",
+      "/cart",
+      "/checkout",
+      "/order-placed",
+      "/reviews",
+    ].includes(location.pathname) &&
+    !location.pathname.startsWith("/account") &&
+    !location.pathname.startsWith("/seller");
+
   const hideHeader = hideHeaderPaths.includes(location.pathname);
 
   const hideFooter =
@@ -37,7 +57,7 @@ const App = () => {
 
   return (
     <>
-      {!hideHeader && (
+      {!hideHeader && !isNotFound && (
         <>
           <Header />
           <Navbar />
@@ -51,10 +71,15 @@ const App = () => {
         <Route element={<Register />} path="/register" />
         <Route element={<Login />} path="/login" />
         <Route element={<Wishlist />} path="/wishlist" />
+        <Route element={<Cart />} path="/cart" />
+        <Route element={<Checkout />} path="/checkout" />
+        <Route element={<OrderSuccess />} path="/order-placed" />
+        <Route element={<Review />} path="/reviews" />
+        <Route element={<SellerDashboard />} path="/seller/*" />
         <Route element={<NotFound />} path="*" />
       </Routes>
 
-      {!hideFooter && <Footer />}
+      {!hideFooter && !isNotFound && <Footer />}
     </>
   );
 };
