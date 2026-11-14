@@ -13,6 +13,10 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import RevenueChart from "./RevenueChart/RevenueChart";
 import Orders from "./Orders/Orders";
 import Products from "./Products/Products";
+import Payment from "./Payment/Payment";
+import TransactionTable from "./Payment/TransactionTable";
+import Profile from "./Account/Profile";
+import AddProduct from "./Products/AddProduct";
 
 const menu = [
   {
@@ -118,7 +122,7 @@ const SellerDashboard = () => {
                   onClick={() =>
                     elem.name === "Logout"
                       ? handleLogout()
-                      : handleNavigate(elem.path)
+                      : navigate(elem.path)
                   }
                   className="cursor-pointer pr-7"
                   key={index}
@@ -146,6 +150,10 @@ const SellerDashboard = () => {
             <Route path="/" element={<RevenueChart />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/add-product" element={<AddProduct />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/transactions" element={<TransactionTable />} />
+            <Route path="/account" element={<Profile />} />
           </Routes>
         </section>
       </div>

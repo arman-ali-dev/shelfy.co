@@ -14,6 +14,7 @@ import Checkout from "./pages/Checkout/Checkout";
 import OrderSuccess from "./pages/Checkout/OrderSuccess";
 import Review from "./pages/Review/Review";
 import SellerDashboard from "./pages/Seller/SellerDashboard";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
 
 const App = () => {
   const location = useLocation();
@@ -45,7 +46,8 @@ const App = () => {
       "/reviews",
     ].includes(location.pathname) &&
     !location.pathname.startsWith("/account") &&
-    !location.pathname.startsWith("/seller");
+    !location.pathname.startsWith("/seller") &&
+    !location.pathname.startsWith("/admin");
 
   const hideHeader = hideHeaderPaths.includes(location.pathname);
 
@@ -76,6 +78,7 @@ const App = () => {
         <Route element={<OrderSuccess />} path="/order-placed" />
         <Route element={<Review />} path="/reviews" />
         <Route element={<SellerDashboard />} path="/seller/*" />
+        <Route element={<AdminDashboard />} path="/admin/*" />
         <Route element={<NotFound />} path="*" />
       </Routes>
 
