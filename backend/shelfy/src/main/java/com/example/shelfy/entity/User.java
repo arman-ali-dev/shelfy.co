@@ -38,7 +38,7 @@ public class User {
     private UserRole role;
 
     @OneToOne
-    @JoinColumn(name = "user")
+    @JoinColumn(name = "cart_id", nullable = false, unique = true)
     private Cart cart;
 
     @CreationTimestamp
