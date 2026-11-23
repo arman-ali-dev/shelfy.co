@@ -14,8 +14,10 @@ import { Divider } from "@mui/material";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Category from "./Category/Category";
 import AddCategory from "./Category/AddCategory";
-import CouponCodes from "./CouponCodes/CouponCodes";
-import AddCouponCode from "./CouponCodes/AddCouponCode";
+import CouponCodes from "./CouponCode/CouponCodes";
+import AddCouponCode from "./CouponCode/AddCouponCode";
+import Sellers from "./Seller/Sellers";
+import Users from "./User/Users";
 
 const menu = [
   {
@@ -145,9 +147,8 @@ const AdminDashboard = () => {
             <Route path="/add-category" element={<AddCategory />} />
             <Route path="/coupons" element={<CouponCodes />} />
             <Route path="/add-coupon" element={<AddCouponCode />} />
-            {/*
+            <Route path="/sellers" element={<Sellers />} />
             <Route path="/users" element={<Users />} />
-            <Route path="/sellers" element={<Sellers />} /> */}
           </Routes>
         </section>
       </div>
