@@ -1,0 +1,14 @@
+package com.example.shelfy;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class ShelfyApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ShelfyApplication.class, args);
+	}
+
+}
