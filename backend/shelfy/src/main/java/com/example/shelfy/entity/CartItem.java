@@ -25,7 +25,6 @@ public class CartItem {
     @JoinColumn(name = "variant_id", nullable = false)
     private Variant product;
 
-    @Column(nullable = false)
     private int quantity;
 
     @Column(nullable = false)
