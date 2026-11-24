@@ -37,7 +37,7 @@ public class User {
     @Column(nullable = false)
     private UserRole role;
 
-    @OneToOne
+    @OneToOne(optional = false)
     @JoinColumn(name = "cart_id", nullable = false, unique = true)
     private Cart cart;
 
