@@ -36,7 +36,7 @@ public class Cart {
     @Column(nullable = false)
     @DecimalMin("0.0")
     @DecimalMax("100.0")
-    private Long discount;
+    private Double discount;
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
