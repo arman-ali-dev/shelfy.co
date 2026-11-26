@@ -49,9 +49,11 @@ public class User {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    public User(String fullName, String email, UserRole role) {
+    public User(String fullName, String email, String phoneNumber, String password, UserRole role) {
         this.fullName = fullName;
         this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
         this.role = role;
     }
 
