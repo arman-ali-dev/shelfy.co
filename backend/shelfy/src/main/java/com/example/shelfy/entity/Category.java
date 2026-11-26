@@ -28,7 +28,7 @@ public class Category {
     @Column(nullable = false)
     private String image;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     @JoinColumn(name = "parent_id")
     private Category parentCategory;
 
