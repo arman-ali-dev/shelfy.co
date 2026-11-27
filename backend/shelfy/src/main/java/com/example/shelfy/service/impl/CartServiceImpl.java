@@ -13,8 +13,9 @@ public class CartServiceImpl implements CartService {
     private final CartRepository cartRepository;
 
     @Override
-    public Cart createCart() {
+    public Cart createCart(User user) {
         Cart cart = new Cart();
+        cart.setUser(user);
         cart.setSubTotalPrice(0L);
         cart.setTotalPrice(0L);
         cart.setDiscount(0.0);

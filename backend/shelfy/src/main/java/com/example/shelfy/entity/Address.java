@@ -2,6 +2,7 @@ package com.example.shelfy.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "addresses")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,5 +62,23 @@ public class Address {
     @Override
     public int hashCode() {
         return Address.class.hashCode();
+    }
+
+    public Address(User user,
+                   String name,
+                   String phoneNumber,
+                   String pinCode,
+                   String address,
+                   String locality,
+                   String city,
+                   String state) {
+        this.user = user;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.pinCode = pinCode;
+        this.address = address;
+        this.locality = locality;
+        this.city = city;
+        this.state = state;
     }
 }

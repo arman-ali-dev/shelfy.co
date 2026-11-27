@@ -37,10 +37,6 @@ public class User {
     @Column(nullable = false)
     private UserRole role;
 
-    @OneToOne(optional = false)
-    @JoinColumn(name = "cart_id", nullable = false, unique = true)
-    private Cart cart;
-
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;

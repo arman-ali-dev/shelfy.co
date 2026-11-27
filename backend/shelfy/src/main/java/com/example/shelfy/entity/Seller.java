@@ -2,6 +2,7 @@ package com.example.shelfy.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "sellers")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +26,7 @@ public class Seller {
     @Column(nullable = false, length = 100)
     private String businessName;
 
-    @Column(nullable = false, length = 100, unique = true)
+    @Column(nullable = false, length = 150, unique = true)
     private String businessEmail;
 
     @Column(nullable = false, unique = true)
@@ -60,6 +62,32 @@ public class Seller {
     @UpdateTimestamp
     @Column(nullable = false)
     private LocalDateTime updatedAt;
+
+    public Seller(User user,
+                  String businessName,
+                  String businessEmail,
+                  Long businessMobileNumber,
+                  String businessAddress,
+                  String businessLogo,
+                  String banner,
+                  Long accountNumber,
+                  String accountHolderName,
+                  String ifscCode,
+                  Address pickupAddress,
+                  String gstin) {
+        this.user = user;
+        this.businessName = businessName;
+        this.businessEmail = businessEmail;
+        this.businessMobileNumber = businessMobileNumber;
+        this.businessAddress = businessAddress;
+        this.businessLogo = businessLogo;
+        this.banner = banner;
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.ifscCode = ifscCode;
+        this.pickupAddress = pickupAddress;
+        this.gstin = gstin;
+    }
 
     @Override
     public boolean equals(Object o) {

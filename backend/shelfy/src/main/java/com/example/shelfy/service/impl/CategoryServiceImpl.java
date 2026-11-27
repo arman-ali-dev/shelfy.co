@@ -28,17 +28,12 @@ public class CategoryServiceImpl implements CategoryService {
         category.setParentCategory(parentCategory);
         category.setImage(request.getImage());
 
-        Category savedCategory = categoryRepository.save(category);
-
-        return new CategoryResponse(
-                savedCategory.getName(),
-                savedCategory.getDescription(),
-                savedCategory.getImage());
+        return mapToCategoryResponse(categoryRepository.save(category));
     }
 
     @Override
     public List<CategoryResponse> getAllCategories() {
-        return categoryRepository.findAll()
+        return categoryRepository.findAllByOrderByCreatedAtDesc()
                 .stream()
                 .map(this::mapToCategoryResponse)
                 .toList();
@@ -83,6 +78,10 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     private CategoryResponse mapToCategoryResponse(Category category) {
-        return new CategoryResponse(category.getName(), category.getDescription(), category.getImage());
+        return new CategoryResponse(
+                category.getId(),
+                category.getName(),
+                category.getDescription(),
+                category.getImage());
     }
 }

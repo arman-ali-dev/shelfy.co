@@ -43,9 +43,8 @@ public class AuthServiceImpl implements AuthService {
                 UserRole.CUSTOMER
         );
 
-        Cart cart = cartService.createCart();
-        user.setCart(cart);
-        userRepository.save(user);
+        User savedUser = userRepository.save(user);
+        cartService.createCart(savedUser);
 
         Authentication authentication = authenticationManager.authenticate(
                 UsernamePasswordAuthenticationToken.unauthenticated(
