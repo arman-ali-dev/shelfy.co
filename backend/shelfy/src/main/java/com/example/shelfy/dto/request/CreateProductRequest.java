@@ -1,6 +1,7 @@
 package com.example.shelfy.dto.request;
 
 import com.example.shelfy.entity.Variant;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +22,8 @@ public class CreateProductRequest {
     private Long categoryId;
 
     @NotEmpty(message = "At least one variant is required")
-    private List<Variant> variants;
+    @Valid
+    private List<CreateVariantRequest> variants;
 
     private boolean isBestSeller;
 }

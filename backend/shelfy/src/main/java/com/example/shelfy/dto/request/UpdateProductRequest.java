@@ -24,7 +24,7 @@ public class UpdateProductRequest {
     private Long categoryId;
 
     @NotEmpty(message = "At least one variant is required")
-    private List<Variant> variants;
+    private List<CreateVariantRequest> variants;
 
     private boolean isBestSeller;
 }

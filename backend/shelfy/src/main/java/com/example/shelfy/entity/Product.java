@@ -32,7 +32,7 @@ public class Product {
     @JoinColumn(name = "seller_id")
     private Seller seller;
 
-    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Variant> variants;
 
     private boolean isBestSeller;

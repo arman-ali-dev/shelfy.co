@@ -15,6 +15,6 @@ public class ProductResponse {
     private String name;
     private String description;
     private CategoryResponse category;
-    private Set<Variant> variants;
+    private Set<VariantResponse> variants;
     private boolean isBestSeller;
 }

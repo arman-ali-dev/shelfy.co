@@ -151,6 +151,12 @@ public class SellerServiceImpl implements SellerService {
                 .orElseThrow(() -> new ResourceNotFoundException("Seller not found"));
     }
 
+    @Override
+    public Seller getSellerByUser(User user) {
+        return sellerRepository.findByUser(user)
+                .orElseThrow(() -> new ResourceNotFoundException("Seller not found"));
+    }
+
     private SellerResponse mapToSellerResponse(Seller seller) {
         return new SellerResponse(
                 seller.getId(),

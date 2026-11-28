@@ -6,6 +6,7 @@ import com.example.shelfy.dto.response.AuthResponse;
 import com.example.shelfy.dto.response.SellerProfileResponse;
 import com.example.shelfy.dto.response.SellerResponse;
 import com.example.shelfy.entity.Seller;
+import com.example.shelfy.entity.User;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface SellerService {
     void deleteSeller(Long id);
 
     Seller getSellerById(Long id);
+
+    Seller getSellerByUser(User user);
 }

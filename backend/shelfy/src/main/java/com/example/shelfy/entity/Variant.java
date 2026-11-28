@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -15,6 +16,7 @@ import java.util.*;
 @Table(name = "variants")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Variant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,5 +73,28 @@ public class Variant {
     @Override
     public int hashCode() {
         return Variant.class.hashCode();
+    }
+
+    public Variant(
+            Product product,
+            List<String> images,
+            Long mrpPrice,
+            Long sellingPrice,
+            Double discount,
+            Long stock,
+            String color,
+            String size,
+            Map<String, String> specifications,
+            Set<String> keyFeatures) {
+        this.product = product;
+        this.images = images;
+        this.mrpPrice = mrpPrice;
+        this.sellingPrice = sellingPrice;
+        this.discount = discount;
+        this.stock = stock;
+        this.color = color;
+        this.size = size;
+        this.specifications = specifications;
+        this.keyFeatures = keyFeatures;
     }
 }
